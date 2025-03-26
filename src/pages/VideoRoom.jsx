@@ -8,12 +8,7 @@ const VideoRoom = () => {
         const serverSecret = import.meta.env.VITE_SERVERSECRET;
         const kitToken=ZegoUIKitPrebuilt.generateKitTokenForTest(appID,serverSecret,roomID,Date.now().toString(),"Shivansh Agrawal")
         const zp=ZegoUIKitPrebuilt.create(kitToken);
-
-        console.log(appID);
-        console.log(serverSecret);
         
-        
-
         zp.joinRoom({
             container: element,
             sharedLinks: [
