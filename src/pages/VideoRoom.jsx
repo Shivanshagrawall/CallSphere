@@ -1,8 +1,10 @@
 import React from 'react'
 import {ZegoUIKitPrebuilt} from '@zegocloud/zego-uikit-prebuilt'
 import { useParams } from 'react-router-dom'
+
 const VideoRoom = () => {
     let {roomID}=useParams();
+
     const myMeeting=async(element)=>{
         const appID = Number(import.meta.env.VITE_APPID);
         const serverSecret = import.meta.env.VITE_SERVERSECRET;
@@ -26,6 +28,7 @@ const VideoRoom = () => {
             },
        });
     }
+    
   return (
     <div>
         <div ref={myMeeting}/>
